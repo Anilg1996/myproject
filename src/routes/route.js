@@ -14,11 +14,11 @@ const router = express.Router();///test-you
 //     res.send('My first ever api!')
 // });
 
-// Second Problem 
+//Second Problem 
 // const helper = require("../util/helper.js");
 // router.get('/test-me', function (req, res) {
 //     helper.getBatchInfo();
-//     res.send('My first ever api!')
+//     res.send('My first ever api!');
 // });
 
 // Third Question
@@ -28,6 +28,7 @@ const router = express.Router();///test-you
 //     res.send('My first ever api!')
 // });
 
+// Fourth problem
 const a = require("../lodash/lodash.js");
 router.get('/test-me', function (req, res) {
        a.lodash();

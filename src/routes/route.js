@@ -8,8 +8,10 @@ router.get('/test-me', function (req, res) {
     res.send('My second ever api!')
 });
 
-router.get('/students', function (req, res){
-    console.log("The path params in the request are : ", req.params)
+router.get('/students/:name', function (req, res){
+    console.log(req.params) 
+    const kumar= req.params.name
+    console.log("The path params in the request are : ", kumar)
     let students = ['Sabiha', 'Neha', 'Akash']
     res.send(students)
 })
@@ -32,12 +34,90 @@ router.get('/students/:studentName', function(req, res){
 })
 
 // Example 2 for path params
-router.get('/student-details/:name', function(req, res){
+router.get('/student-details/:name',anil)
+
+function anil(req, res){
     let requestParams = req.params
     console.log("This is the request ", requestParams)
     let studentName = requestParams.name
     console.log('Name of the student is ', studentName)
     res.send('Dummy response')
-})
+}
+
+// First Problem 
+
+router.get('/movies', function (req, res) {
+    const movies=["Rang de basanti", "The shining", "Lord of the rings", "Batman begins"];
+    res.send(movies);
+});
+
+
+// second problem
+router.get('/movies/:indexNumber', function (req, res) {
+    const movies=["Rang de basanti", "The shining", "Lord of the rings", "Batman begins"];
+    const anil=req.params;
+    const gupta=Number(anil.indexNumber);
+    res.send(movies[gupta]);
+});
+
+// Third Problem
+
+router.get('/movies/:indexNumber',function(req,res){
+    let movies=["Rang de basanti", "The shining", "Lord of the rings", "Batman begins"];
+    let obj=req.params;
+    let x= Number(obj.indexNumber);
+    if(x>movies.length-1){
+        res.send("use a valid index");
+    }else{
+        res.send(movies[i]);
+    }
+});
+
+// Fourt Problem
+
+router.get('/Films',function(req,res){
+    const a=[ {
+        "id": 1,
+        "name": "The Shining"
+       }, {
+        "id": 2,
+        "name": "Incendies"
+       }, {
+        "id": 3,
+        "name": "Rang de Basanti"
+       }, {
+        "id": 4,
+        "name": "Finding Nemo"
+       }]
+       res.send(a)       
+});
+
+// Fifth problem
+
+router.get('/films/:filmId',function(req,res){
+    let objofmov=[ {
+        "id": 1,
+        "name": "The Shining"
+       }, {
+        "id": 2,
+        "name": "Incendies"
+       }, {
+        "id": 3,
+        "name": "Rang de Basanti"
+       }, {
+        "id": 4,
+        "name": "Finding Nemo"
+       }]
+       let filmofobj=req.params;
+       let filmid=Number(filmofobj.filmId)
+       if(filmid>objofmov.length-1){
+        res.send("No movie esists with this id")
+       }else{
+        res.send(objofmov[filmid].name)
+       }
+});
+
+
+
 
 module.exports = router;

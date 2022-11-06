@@ -47,5 +47,26 @@ If present, check that the token is valid.
 - Once, all the apis are working fine, move the authentication related code in a middleware called auth.js
 - Add this middleware at route level in the routes where applicable.
 
+**************************************************************************************************************************
+jwt 
+what is jwt?
+why we use jwt?
+How we use jwt?
+
+Header   // safe // model // how secure
+Payload  // document  // {userId:"", password:""}
+Signature/ secret key  // 121 password  // secret key
 
 
+how we creat jwt toke?
+
+const myToken = jwt.sign({userId:""}, 'your secret password')  //
+const decoded = jwt.verify(myToken, 'your secret passworD');  //{ foo: 'bar',name:"sachin", id:""}
+//{ foo: 'bar' }  //payload
+
+
+body = { email:"sachin@gmail"}
+
+const jwtToken 
+
+res.send({token: jwtToken, message:"success"})

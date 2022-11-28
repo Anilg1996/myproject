@@ -20,7 +20,7 @@ const internSchema = new mongoose.Schema(
       type: Number,
       required: true,
       unique: true,
-      min: [1000000000, "Please provide valid mobile number"],
+      min: [1000000000, "Please provide valid mobile number"], 
       max: [9999999999, "Please provide a valid mobile number"],
       trim: true,
     },
@@ -35,5 +35,4 @@ const internSchema = new mongoose.Schema(
   },
   { timestamps: true }
 );
-
 module.exports = mongoose.model("intern", internSchema);

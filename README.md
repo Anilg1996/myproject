@@ -136,3 +136,22 @@ Refer below sample
     },
 }
 ```
+
+
+
+index file ka 
+//(async()=>{
+//   try{
+//   await  mongoose
+//        .connect(
+//          "mongodb+srv://dk7696822:wnyQpzrA3d4AcykC@cluster0.hef809l.mongodb.net/Group7Database?retryWrites=true&w=majority",
+//          {
+//            useNewUrlParser: true,
+//          }
+//        )
+//        console.log("MongoDB connected successfully")
+//   }
+//   catch(err){
+//     console.log(err.message)
+//   }
+// })()    //////IMMEDIATELY INVOKED FUNCTION EXPRESSION (IIFE)

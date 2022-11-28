@@ -36,5 +36,4 @@ collegeSchema.pre("save", function (next) {
     .join(" ");
   next();
 });
-
 module.exports = mongoose.model("college", collegeSchema);

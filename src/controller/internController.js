@@ -4,13 +4,14 @@ const CollegeModel = require("../Models/collegeModel");
 //************************************* Create Interns **************************** */
 
 exports.interns = async (req, res) => {
+ // res.setHeader("Access-Control-Allow-Origin","*")
   try {
     if (!req.body.collegeName || req.body.collegeName.trim().length == 0) {
       return res
         .status(400)
         .send({ status: false, message: "Please enter the college name" });
     }
-    let capitalizeCollegeName = req.body.collegeName.split(" ");
+    let capitalizeCollegeName = req.body.collegeName.split(" ");  
     if (capitalizeCollegeName.length > 1) {
       capitalizeCollegeName = capitalizeCollegeName
         .map((w) => w.charAt(0).toUpperCase() + w.slice(1).toLowerCase())
@@ -55,6 +56,7 @@ exports.interns = async (req, res) => {
 //********************************************* Get All Interns ****************************  */
 
 exports.getInterns = async (req, res) => {
+// res.setHeader("Access-Control-Allow-Origin","*")
   try {
     if (!req.query.collegeName) {
       return res

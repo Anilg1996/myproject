@@ -9,7 +9,7 @@ const app=express()
 app.use(express.json())
 
 
-mongoose.connect('mongodb+srv://Lucifer:lucifer123@blogging.swrk52y.mongodb.net/test', {useNewUrlParser: true})
+mongoose.connect('mongodb+srv://kanil485333:anil16shalini@project1.lboaf6t.mongodb.net/Anil1997-db', {useNewUrlParser: true})
 .then(()=> console.log("MongoDB connected"))
 .catch((error)=> console.log(error))
 

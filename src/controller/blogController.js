@@ -1,4 +1,4 @@
-const blogModel = require('../models/bolgModel')
+const blogModel = require('../models/blogModel')
 const authorModel = require('../models/authorModel')
 const {idCharacterValid,isValidString} = require("../validator/validator");
 

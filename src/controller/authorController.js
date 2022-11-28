@@ -17,7 +17,6 @@ const createauther = async function (req, res) {
     if(!isValidString(lname))   return res.status(400).send({ status: false, msg: "Please provide valid lname" })
     
     
-
     let titles=["Mr","Mrs","Miss"]
     if(!titles.includes(title))  return res.status(400).send({status:false,msg:"Please provide the title in these options - Mr || Mrs || Miss"})
     if(!isValidEmail(email))  return res.status(400).send({status:false,msg:"invalid emailid"})
